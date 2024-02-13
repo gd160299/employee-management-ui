@@ -5,12 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build-css": "tailwindcss build src/assets/main.css -o src/assets/main-ts.css"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "pinia": "^2.0.0-rc.10",
+    "vue": "^3.2.13",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -18,11 +20,14 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "^3.4.18",
     "autoprefixer": "^10.4.17",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "ts-loader": "^9.5.1",
+    "vue-loader": "^17.4.2"
   },
   "eslintConfig": {
     "root": true,
@@ -36,7 +41,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",
